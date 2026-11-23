@@ -1260,6 +1260,22 @@ body.dark-theme .site-footer {
   background-color: #0D1217;
 }
 
+body.dark-theme .mission,
+body.dark-theme .team-member {
+  background-color: #1F2933;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+}
+
+body.dark-theme .mission p {
+  color: #C9D0D6;
+}
+
+body.dark-theme .team-member p,
+body.dark-theme .hint,
+body.dark-theme .page-intro {
+  color: #AEB7C0;
+}
+
 /* ==========================================================
    18. RESPONSIVE HEADER, FOOTER AND HOME PAGE
    ========================================================== */
