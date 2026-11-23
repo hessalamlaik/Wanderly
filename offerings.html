@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="All Wanderly club trips and activities with their prices and descriptions.">
+  <title>Club Offerings | Wanderly Travel Club</title>
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand"><img src="images/logo.svg" alt="Wanderly logo" width="46" height="46">Wanderly</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="offerings.html" class="active" aria-current="page">Club Offerings</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="member-dashboard.html">Member Dashboard</a></li>
+        <li><a href="manager-dashboard.html">Manager Dashboard</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="index.html">Home</a></li>
+      <li aria-current="page">Club Offerings</li>
+    </ol>
+  </nav>
+
+  <main>
+    <h1>Club Offerings</h1>
+    <form class="toolbar" aria-label="Sort offerings">
+      <label for="sort">Sort by:</label>
+      <select id="sort" name="sort">
+        <option value="">-- Choose --</option>
+        <optgroup label="Price">
+          <option value="price-asc">Low to High</option>
+          <option value="price-desc">High to Low</option>
+        </optgroup>
+        <optgroup label="Name">
+          <option value="name-asc">A&ndash;Z</option>
+          <option value="name-desc">Z&ndash;A</option>
+        </optgroup>
+      </select>
+    </form>
+
+    <section class="offerings" id="offerings-list" aria-label="All offerings">
+      <article class="offering-card" data-name="AlUla Heritage Trip" data-price="850">
+        <img src="images/offerings/alula-heritage.svg" alt="AlUla Heritage Trip" width="800" height="500">
+        <div class="offering-body">
+          <h2>AlUla Heritage Trip</h2>
+          <p>Explore the ancient tombs of Hegra, Elephant Rock and the old town of AlUla with a local heritage guide.</p>
+          <span class="price">850 SAR</span>
+        </div>
+        <div class="more-info">
+          <p class="more-title">AlUla Heritage Trip</p>
+          <ul>
+            <li>Category: Cultural</li>
+            <li>Duration: 3 days / 2 nights</li>
+            <li>Next trip: 18 December 2026</li>
+            <li>Group size: 20 members</li>
+            <li>Price: 850 SAR</li>
+            <li>Hotel stay and breakfast included</li><li>Guided tour of Hegra</li><li>Sunset at Elephant Rock</li>
+          </ul>
+        </div>
+      </article>
+      <article class="offering-card" data-name="Edge of the World Hike" data-price="150">
+        <img src="images/offerings/edge-of-the-world.svg" alt="Edge of the World Hike" width="800" height="500">
+        <div class="offering-body">
+          <h2>Edge of the World Hike</h2>
+          <p>A guided day hike to the dramatic Tuwaiq cliffs north-west of Riyadh, ending with a sunset picnic.</p>
+          <span class="price">150 SAR</span>
+        </div>
+        <div class="more-info">
+          <p class="more-title">Edge of the World Hike</p>
+          <ul>
+            <li>Category: Adventure</li>
+            <li>Duration: 1 day</li>
+            <li>Next trip: 5 December 2026</li>
+            <li>Group size: 25 members</li>
+            <li>Price: 150 SAR</li>
+            <li>4x4 transport from campus</li><li>Moderate fitness level</li><li>Picnic dinner included</li>
+          </ul>
+        </div>
+      </article>
+      <article class="offering-card" data-name="Red Sea Snorkeling Weekend" data-price="1200">
+        <img src="images/offerings/red-sea-snorkeling.svg" alt="Red Sea Snorkeling Weekend" width="800" height="500">
+        <div class="offering-body">
+          <h2>Red Sea Snorkeling Weekend</h2>
+          <p>Discover the coral reefs of the Red Sea near Jeddah with certified instructors and all the gear you need.</p>
+          <span class="price">1200 SAR</span>
+        </div>
+        <div class="more-info">
+          <p class="more-title">Red Sea Snorkeling Weekend</p>
+          <ul>
+            <li>Category: Nature</li>
+            <li>Duration: 2 days / 1 night</li>
+            <li>Next trip: 4 December 2026</li>
+            <li>Group size: 16 members</li>
+            <li>Price: 1200 SAR</li>
+            <li>Flights from Riyadh included</li><li>Snorkeling gear provided</li><li>Beginner friendly</li>
+          </ul>
+        </div>
+      </article>
+      <article class="offering-card" data-name="Historic Diriyah Walk" data-price="0">
+        <img src="images/offerings/diriyah-walk.svg" alt="Historic Diriyah Walk" width="800" height="500">
+        <div class="offering-body">
+          <h2>Historic Diriyah Walk</h2>
+          <p>A free evening walk through At-Turaif and Bujairi Terrace to learn the story of the first Saudi state.</p>
+          <span class="price free">Free &middot; 0 SAR</span>
+        </div>
+        <div class="more-info">
+          <p class="more-title">Historic Diriyah Walk</p>
+          <ul>
+            <li>Category: City Break</li>
+            <li>Duration: Half day</li>
+            <li>Next trip: 28 November 2026</li>
+            <li>Group size: 30 members</li>
+            <li>Price: 0 SAR</li>
+            <li>Free for all club members</li><li>Walking tour of At-Turaif</li><li>Meet new members</li>
+          </ul>
+        </div>
+      </article>
+      <article class="offering-card" data-name="Abha Mountain Retreat" data-price="950">
+        <img src="images/offerings/abha-mountains.svg" alt="Abha Mountain Retreat" width="800" height="500">
+        <div class="offering-body">
+          <h2>Abha Mountain Retreat</h2>
+          <p>Cool weather, green mountains and cable-car rides in Abha, with a visit to the Rijal Almaa heritage village.</p>
+          <span class="price">950 SAR</span>
+        </div>
+        <div class="more-info">
+          <p class="more-title">Abha Mountain Retreat</p>
+          <ul>
+            <li>Category: Nature</li>
+            <li>Duration: 3 days / 2 nights</li>
+            <li>Next trip: 11 December 2026</li>
+            <li>Group size: 18 members</li>
+            <li>Price: 950 SAR</li>
+            <li>Mountain lodge stay</li><li>Cable car ride included</li><li>Visit Rijal Almaa village</li>
+          </ul>
+        </div>
+      </article>
+      <article class="offering-card" data-name="Desert Camping Night" data-price="200">
+        <img src="images/offerings/desert-camping.svg" alt="Desert Camping Night" width="800" height="500">
+        <div class="offering-body">
+          <h2>Desert Camping Night</h2>
+          <p>A night under the stars near Riyadh with a campfire dinner, stargazing session and a sunrise walk on the dunes.</p>
+          <span class="price">200 SAR</span>
+        </div>
+        <div class="more-info">
+          <p class="more-title">Desert Camping Night</p>
+          <ul>
+            <li>Category: Adventure</li>
+            <li>Duration: Overnight</li>
+            <li>Next trip: 12 December 2026</li>
+            <li>Group size: 24 members</li>
+            <li>Price: 200 SAR</li>
+            <li>Tents and dinner provided</li><li>Stargazing with an instructor</li><li>Sunrise dune walk</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="images/logo.svg" alt="Wanderly logo" width="72" height="72">
+        <div>
+          <h2>Contact Us</h2>
+          <address>
+            Wanderly Travel Club, Riyadh, Saudi Arabia<br>
+            <a href="mailto:info@wanderly-club.example">info@wanderly-club.example</a> | <a href="tel:+966500000000">+966 50 000 0000</a>
+          </address>
+        </div>
+      </div>
+      <div>
+        <h2>Follow Us</h2>
+        <ul class="social">
+          <li><a href="https://www.instagram.com/" title="Instagram"><img src="images/icons/camera.svg" alt="Instagram" width="40" height="40">@wanderly</a></li>
+          <li><a href="https://x.com/" title="X"><img src="images/icons/chat.svg" alt="X" width="40" height="40">@wanderly</a></li>
+          <li><a href="https://www.youtube.com/" title="YouTube"><img src="images/icons/video.svg" alt="YouTube" width="40" height="40">@wanderly</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2026 Wanderly Interest Club. All rights reserved.</p>
+  </footer>
+</body>
+</html>

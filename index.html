@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Wanderly is a student travel and exploration club. Discover trips, meet our leaders and join the community.">
+  <title>Home | Wanderly Travel Club</title>
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand"><img src="images/logo.svg" alt="Wanderly logo" width="46" height="46">Wanderly</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+        <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+        <li><a href="offerings.html">Club Offerings</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="member-dashboard.html">Member Dashboard</a></li>
+        <li><a href="manager-dashboard.html">Manager Dashboard</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      <li aria-current="page">Home</li>
+    </ol>
+  </nav>
+
+  <main>
+    <div class="page-title">
+      <h1>Wanderly</h1>
+      <button type="button" id="theme-toggle" class="theme-toggle" aria-pressed="false">Dark theme</button>
+    </div>
+    <section class="intro" aria-label="About Wanderly">
+      <img src="images/hero-travel.svg" alt="Illustration of mountains and a winding travel path" width="800" height="500">
+      <div class="intro-text">
+        <p class="tagline">Explore &middot; Connect &middot; Discover</p>
+        <p>Wanderly helps travel lovers discover new destinations, share experiences and join group trips guided by experienced activity leaders.</p>
+        <p>Our mission is to encourage students to step outside their comfort zone, explore new places and cultures, and build lasting friendships through safe and organised travel.</p>
+        <a href="offerings.html" class="btn btn-orange">Browse all trips</a>
+      </div>
+    </section>
+
+    <section aria-labelledby="offerings-title">
+      <h2 id="offerings-title">Offerings</h2>
+      <div class="offerings">
+      <article class="offering-card">
+        <img src="images/offerings/alula-heritage.svg" alt="AlUla Heritage Trip" width="800" height="500">
+        <div class="offering-body">
+          <h3>AlUla Heritage Trip</h3>
+          <p>Explore the ancient tombs of Hegra, Elephant Rock and the old town of AlUla with a local heritage guide.</p>
+        </div>
+        <div class="more-info">
+          <p class="more-title">AlUla Heritage Trip</p>
+          <ul>
+            <li>Category: Cultural</li>
+            <li>Duration: 3 days / 2 nights</li>
+            <li>Next trip: 18 December 2026</li>
+            <li>Group size: 20 members</li>
+            <li>Price: 850 SAR</li>
+            <li>Hotel stay and breakfast included</li><li>Guided tour of Hegra</li><li>Sunset at Elephant Rock</li>
+          </ul>
+        </div>
+      </article>
+      <article class="offering-card">
+        <img src="images/offerings/edge-of-the-world.svg" alt="Edge of the World Hike" width="800" height="500">
+        <div class="offering-body">
+          <h3>Edge of the World Hike</h3>
+          <p>A guided day hike to the dramatic Tuwaiq cliffs north-west of Riyadh, ending with a sunset picnic.</p>
+        </div>
+        <div class="more-info">
+          <p class="more-title">Edge of the World Hike</p>
+          <ul>
+            <li>Category: Adventure</li>
+            <li>Duration: 1 day</li>
+            <li>Next trip: 5 December 2026</li>
+            <li>Group size: 25 members</li>
+            <li>Price: 150 SAR</li>
+            <li>4x4 transport from campus</li><li>Moderate fitness level</li><li>Picnic dinner included</li>
+          </ul>
+        </div>
+      </article>
+      <article class="offering-card">
+        <img src="images/offerings/red-sea-snorkeling.svg" alt="Red Sea Snorkeling Weekend" width="800" height="500">
+        <div class="offering-body">
+          <h3>Red Sea Snorkeling Weekend</h3>
+          <p>Discover the coral reefs of the Red Sea near Jeddah with certified instructors and all the gear you need.</p>
+        </div>
+        <div class="more-info">
+          <p class="more-title">Red Sea Snorkeling Weekend</p>
+          <ul>
+            <li>Category: Nature</li>
+            <li>Duration: 2 days / 1 night</li>
+            <li>Next trip: 4 December 2026</li>
+            <li>Group size: 16 members</li>
+            <li>Price: 1200 SAR</li>
+            <li>Flights from Riyadh included</li><li>Snorkeling gear provided</li><li>Beginner friendly</li>
+          </ul>
+        </div>
+      </article>
+      </div>
+      <p class="section-link"><a href="offerings.html">See all club offerings &rarr;</a></p>
+    </section>
+
+    <section aria-labelledby="reviews-title">
+      <h2 id="reviews-title">Member Reviews</h2>
+      <div class="reviews">
+      <div class="review">
+        <h3>AlUla Heritage Trip</h3>
+        <p class="stars">&#9733;&#9733;&#9733;&#9733;&#9733; <small>(5/5)</small></p>
+        <p class="feedback">&ldquo;The tour guide made the history of Hegra come alive. Best weekend of the semester!&rdquo;</p>
+        <p class="member">&mdash; Ghada A., club member</p>
+      </div>
+      <div class="review">
+        <h3>Edge of the World Hike</h3>
+        <p class="stars">&#9733;&#9733;&#9733;&#9733;&#9734; <small>(4/5)</small></p>
+        <p class="feedback">&ldquo;Amazing views and a very well organised hike. Bring extra water!&rdquo;</p>
+        <p class="member">&mdash; Shahad M., club member</p>
+      </div>
+      <div class="review">
+        <h3>Historic Diriyah Walk</h3>
+        <p class="stars">&#9733;&#9733;&#9733;&#9733;&#9733; <small>(5/5)</small></p>
+        <p class="feedback">&ldquo;A free trip that felt like a premium tour. I met so many new friends.&rdquo;</p>
+        <p class="member">&mdash; Rawan S., club member</p>
+      </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="trip-title">
+      <h2 id="trip-title">Trip of the Month</h2>
+      <div class="trip-of-month">
+        <img src="images/trip-of-the-month.svg" alt="AlUla rock formations at sunset" width="1200" height="400">
+        <div class="trip-content">
+          <span class="badge">Highlighted destination</span>
+          <h3>AlUla Heritage Trip</h3>
+          <p>Next departure: 18 December 2026 &middot; Only 6 seats left</p>
+          <div class="countdown" id="trip-countdown" data-departure="2026-12-18T07:00:00+03:00">
+            <div><span id="cd-days">00</span><small>Days</small></div>
+            <div><span id="cd-hours">00</span><small>Hours</small></div>
+            <div><span id="cd-minutes">00</span><small>Minutes</small></div>
+            <div><span id="cd-seconds">00</span><small>Seconds</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="images/logo.svg" alt="Wanderly logo" width="72" height="72">
+        <div>
+          <h2>Contact Us</h2>
+          <address>
+            Wanderly Travel Club, Riyadh, Saudi Arabia<br>
+            <a href="mailto:info@wanderly-club.example">info@wanderly-club.example</a> | <a href="tel:+966500000000">+966 50 000 0000</a>
+          </address>
+        </div>
+      </div>
+      <div>
+        <h2>Follow Us</h2>
+        <ul class="social">
+          <li><a href="https://www.instagram.com/" title="Instagram"><img src="images/icons/camera.svg" alt="Instagram" width="40" height="40">@wanderly</a></li>
+          <li><a href="https://x.com/" title="X"><img src="images/icons/chat.svg" alt="X" width="40" height="40">@wanderly</a></li>
+          <li><a href="https://www.youtube.com/" title="YouTube"><img src="images/icons/video.svg" alt="YouTube" width="40" height="40">@wanderly</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-clock">Current time: <span id="live-clock">Loading...</span></p>
+    <p class="copyright">&copy; 2026 Wanderly Interest Club. All rights reserved.</p>
+  </footer>
+
+  <button type="button" id="back-to-top" class="back-to-top" aria-label="Back to top">&#8593; Top</button>
+</body>
+</html>

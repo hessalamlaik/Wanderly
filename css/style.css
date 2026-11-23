@@ -1,0 +1,1419 @@
+/* ==========================================================
+   Wanderly Travel Club - IT312 Phase 2
+   One shared stylesheet for every page of the website.
+
+   TABLE OF CONTENTS
+    1. Base (reset, typography, layout, breadcrumb)
+    2. Header & Navigation
+    3. Home - Intro
+    4. Buttons
+    5. Offering Cards
+    6. Member Reviews
+    7. Extra Section (Trip of the Month)
+    8. Club Offerings - Sort Toolbar
+    9. About Us (mission and team list)
+   10. Tables, Profile & Member Dashboard
+   11. Forms (all forms + rating control)
+   12. Manager Dashboard pages
+   13. Quick links and Manager pages
+   14. Footer
+   15. Small screens
+   16. Home page - theme button, back to top, footer clock (Phase 3)
+   17. Dark theme (Phase 3)
+   18. Responsive header, footer and Home page (Phase 3)
+   ========================================================== */
+
+/* ==========================================================
+   1. BASE
+   ========================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #212B36;
+  background-color: #FAF7F2;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: #13707A;
+}
+
+a:hover {
+  color: #0E5860;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 8px 24px 36px;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.25;
+  font-weight: 600;
+}
+
+h1 {
+  margin: 8px 0 18px;
+  padding-bottom: 6px;
+  font-size: clamp(1.45rem, 2.5vw, 2rem);
+  border-bottom: 1px solid #D8DDE2;
+}
+
+h2 {
+  font-size: 1.6rem;
+}
+
+main > h2,
+main > section > h2 {
+  margin: 40px 0 20px;
+}
+
+main > h2::after,
+main > section > h2::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 4px;
+  margin-top: 8px;
+  border-radius: 2px;
+  background-color: #EB8C3C;
+}
+
+/* =====Breadcrumbs ===== */
+.breadcrumb {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 24px 0;
+  color: #5B6470;
+  font-size: .88rem;
+}
+.breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; }
+.breadcrumb li + li::before { content: ">"; color: #8A8F96; margin-right: 8px; }
+.breadcrumb a { color: #13707A; text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+/* Visually hidden text that is still read by screen readers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  white-space: nowrap;
+}
+
+/* ==========================================================
+   2. HEADER & NAVIGATION
+   ========================================================== */
+
+.site-header {
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #E3DED6;
+  box-shadow: 0 2px 10px rgba(33, 43, 54, 0.06);
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #212B36;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.brand img {
+  width: 46px;
+  height: 46px;
+}
+
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.main-nav a {
+  display: block;
+  padding: 8px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  color: #212B36;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.main-nav a:hover {
+  background-color: #E7F2F3;
+  color: #13707A;
+}
+
+.main-nav a.active {
+  background-color: #13707A;
+  color: #FFFFFF;
+}
+
+/* ==========================================================
+   3. HOME - INTRO
+   ========================================================== */
+
+.intro {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.intro img {
+  flex: 1 1 380px;
+  min-width: 0;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(33, 43, 54, 0.12);
+}
+
+.intro-text {
+  flex: 1 1 380px;
+}
+
+.intro-text .tagline {
+  color: #13707A;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.intro-text p {
+  font-size: 1.1rem;
+  color: #3D4652;
+}
+
+/* ==========================================================
+   4. BUTTONS
+   ========================================================== */
+
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  border: 2px solid #13707A;
+  border-radius: 10px;
+  background-color: #13707A;
+  color: #FFFFFF;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+  background-color: #0E5860;
+  border-color: #0E5860;
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(19, 112, 122, 0.28);
+}
+
+.btn:focus {
+  outline: 3px solid #F6B26B;
+  outline-offset: 2px;
+}
+
+.btn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.btn-orange {
+  background-color: #EB8C3C;
+  border-color: #EB8C3C;
+  color: #212B36;
+}
+
+.btn-orange:hover {
+  background-color: #F5A257;
+  border-color: #F5A257;
+  color: #212B36;
+  box-shadow: 0 6px 14px rgba(235, 140, 60, 0.35);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #13707A;
+}
+
+.btn-outline:hover {
+  background-color: #E7F2F3;
+  border-color: #13707A;
+  color: #13707A;
+  box-shadow: none;
+}
+
+/* ==========================================================
+   5. OFFERING CARDS
+   ========================================================== */
+
+.offerings {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.offering-card {
+  position: relative;
+  flex: 1 1 300px;
+  max-width: 380px;
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(33, 43, 54, 0.08);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.offering-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.offering-body {
+  padding: 16px 20px 20px;
+}
+
+.offering-body h2,
+.offering-body h3 {
+  margin: 0 0 6px;
+  font-size: 1.15rem;
+}
+
+.offering-body p {
+  margin: 0;
+  color: #5B6470;
+}
+
+.price {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background-color: #FDEBDC;
+  color: #B4581A;
+  font-weight: 600;
+}
+
+.price.free {
+  background-color: #E1F3E5;
+  color: #2E7D32;
+}
+
+.offering-card .more-info {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  padding: 24px;
+  background-color: rgba(19, 112, 122, 0.95);
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.offering-card .more-info .more-title {
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.offering-card .more-info ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.offering-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(33, 43, 54, 0.18);
+}
+
+.offering-card:hover .more-info {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-link {
+  margin-top: 20px;
+}
+
+/* ==========================================================
+   6. MEMBER REVIEWS
+   ========================================================== */
+
+.reviews {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.review {
+  flex: 1 1 280px;
+  background-color: #FFFFFF;
+  border-left: 5px solid #EB8C3C;
+  border-radius: 12px;
+  padding: 18px 22px;
+  box-shadow: 0 4px 14px rgba(33, 43, 54, 0.06);
+}
+
+.review h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.review .stars {
+  color: #EB8C3C;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  margin: 4px 0;
+}
+
+.review .feedback {
+  font-style: italic;
+  color: #3D4652;
+  margin: 6px 0;
+}
+
+.review .member {
+  font-size: 0.9rem;
+  color: #8A8F96;
+  margin: 0;
+}
+
+/* ==========================================================
+   7. EXTRA SECTION (TRIP OF THE MONTH)
+   ========================================================== */
+
+.trip-of-month {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  color: #FFFFFF;
+  background-color: #212B36;
+}
+
+.trip-of-month img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  opacity: 0.85;
+}
+
+.trip-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background: linear-gradient(90deg, rgba(33, 43, 54, 0.85) 0%, rgba(33, 43, 54, 0.35) 60%, rgba(33, 43, 54, 0) 100%);
+}
+
+.trip-content .badge {
+  background-color: #EB8C3C;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.trip-content h3 {
+  color: #FFFFFF;
+  font-size: 2rem;
+  margin: 12px 0 6px;
+}
+
+.trip-content p {
+  margin: 0 0 16px;
+}
+
+.countdown {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.countdown div {
+  min-width: 78px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  text-align: center;
+}
+
+.countdown span {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.countdown small {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ==========================================================
+   8. CLUB OFFERINGS - SORT TOOLBAR
+   ========================================================== */
+
+.toolbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.toolbar label {
+  font-weight: 600;
+}
+
+.toolbar select {
+  min-width: 220px;
+}
+
+/* ==========================================================
+   9. ABOUT US (MISSION AND TEAM LIST)
+   ========================================================== */
+
+.mission {
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  padding: 20px 28px;
+  border-left: 5px solid #13707A;
+}
+
+.team-scroll {
+  display: flex;
+  gap: 22px;
+  overflow-x: auto;
+  padding: 6px 4px 18px;
+  scroll-snap-type: x mandatory;
+}
+
+.team-member {
+  flex: 0 0 230px;
+  scroll-snap-align: start;
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(33, 43, 54, 0.08);
+}
+
+.team-member img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.team-member a {
+  display: block;
+  margin-top: 12px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  text-decoration: none;
+}
+
+.team-member a:hover {
+  text-decoration: underline;
+}
+
+.team-member p {
+  margin: 2px 0 0;
+  color: #8A8F96;
+  font-size: 0.9rem;
+}
+
+.hint {
+  margin: 0 0 8px;
+  color: #8A8F96;
+  font-size: 0.85rem;
+}
+
+/* ==========================================================
+   10. TABLES, PROFILE & MEMBER DASHBOARD
+   ========================================================== */
+
+.page-container { max-width: 1200px; margin: 0 auto; padding: 8px 24px 36px; }
+.page-container > h1 { margin: 8px 0 18px; padding-bottom: 6px; border-bottom: 1px solid #D8DDE2; font-size: clamp(1.45rem, 2.5vw, 2rem); }
+.page-container h2 { margin: 20px 0 12px; }
+.dashboard-panel, .profile-panel { background: #FFFFFF; border: 1px solid #D8DDE2; border-radius: 12px; padding: 18px; box-shadow: 0 4px 14px rgba(33,43,54,.06); }
+.table-wrap { width: 100%; overflow-x: auto; }
+.data-table { width: 100%; border-collapse: collapse; background: #FFFFFF; margin: 0; }
+.data-table th, .data-table td { border: 1px solid #D8DDE2; padding: 13px 14px; text-align: left; vertical-align: middle; }
+.data-table th { background: #E7F2F3; color: #212B36; font-weight: 700; }
+.data-table tbody tr:nth-child(even) { background: #FAFBFC; }
+.data-table tbody tr:hover { background: #F2F8F8; }
+.status { display: inline-block; padding: 4px 10px; border-radius: 20px; font-size: .82rem; font-weight: 600; text-transform: capitalize; white-space: nowrap; }
+.status-pending { color: #8A5200; background: #FFF1D6; }
+.status-declined, .status-rejected { color: #A52A2A; background: #FCE8E6; }
+.status-completed, .status-approved { color: #216E39; background: #E1F3E5; }
+.quick-links { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 18px; }
+.quick-links .btn { min-width: 190px; text-align: center; }
+.profile-summary { display: grid; grid-template-columns: minmax(170px, 32%) 1fr; border: 1px solid #D8DDE2; border-radius: 10px; overflow: hidden; }
+.profile-name { grid-column: 1 / -1; background: #E7F2F3; border-bottom: 1px solid #D8DDE2; padding: 18px; margin: 0; text-align: center; }
+.profile-photo-cell { display: flex; align-items: center; justify-content: center; padding: 20px; border-right: 1px solid #D8DDE2; background: #FFFFFF; }
+.profile-photo { display: block; width: min(100%, 220px); aspect-ratio: 1 / 1; object-fit: cover; border-radius: 12px; border: 1px solid #E3DED6; background: #F7F8FA; }
+.profile-details { width: 100%; border-collapse: collapse; }
+.profile-details th, .profile-details td { border-bottom: 1px solid #D8DDE2; padding: 13px 14px; text-align: left; }
+.profile-details tr:last-child th, .profile-details tr:last-child td { border-bottom: 0; }
+.profile-details th { width: 38%; color: #5B6470; background: #FAFBFC; font-weight: 600; }
+.profile-actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 22px 4px 0; }
+.profile-actions .btn { min-width: 180px; text-align: center; }
+.profile-section { margin-top: 22px; }
+.profile-section p { color: #3D4652; }
+@media (max-width: 650px) {
+  .page-container { padding: 8px 16px 28px; }
+  .breadcrumb { padding: 10px 16px 0; }
+  .dashboard-panel, .profile-panel { padding: 12px; }
+  .data-table th, .data-table td { padding: 10px; font-size: .9rem; }
+  .profile-summary { grid-template-columns: 1fr; }
+  .profile-name { grid-column: 1; }
+  .profile-photo-cell { border-right: 0; border-bottom: 1px solid #D8DDE2; }
+  .profile-photo { width: 170px; }
+  .profile-details th, .profile-details td { padding: 11px; }
+  .quick-links .btn, .profile-actions .btn { flex: 1 1 100%; }
+}
+
+/* ==========================================================
+   11. FORMS
+   ========================================================== */
+
+/* Form container (white panel, same look as the dashboard panels) */
+.form-box {
+  background-color: #FFFFFF;
+  border: 1px solid #D8DDE2;
+  border-radius: 12px;
+  padding: 30px 36px;
+  box-shadow: 0 4px 14px rgba(33, 43, 54, 0.06);
+}
+
+/* Single-column form: fields stay a comfortable reading width */
+.form-stack .field,
+.form-stack .rating {
+  max-width: 640px;
+}
+
+/* Two-column form (used by the Join Our Team form) */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px 28px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 24px;
+}
+
+.form-grid .field {
+  margin-bottom: 0;
+}
+
+.form-box label,
+.rating legend {
+  font-weight: 600;
+  color: #212B36;
+}
+
+/* Text controls */
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="file"],
+select,
+textarea {
+  padding: 11px 14px;
+  border: 2px solid #C9D1D3;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  color: #212B36;
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.4;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+}
+
+select {
+  cursor: pointer;
+}
+
+textarea {
+  min-height: 190px;
+  resize: vertical;
+}
+
+::placeholder {
+  color: #8A8F96;
+  opacity: 1;
+}
+
+input:hover,
+select:hover,
+textarea:hover {
+  border-color: #8FB8BD;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #13707A;
+  box-shadow: 0 0 0 4px rgba(19, 112, 122, 0.18);
+}
+
+.form-hint {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #5B6470;
+}
+
+.form-actions {
+  margin-top: 8px;
+}
+
+/* Star rating control: radio buttons shown as 5 clickable stars.
+   The stars are written 5 -> 1 in the HTML and reversed with
+   row-reverse, so "checked / hovered star + the ones before it"
+   can be coloured with the ~ sibling selector. */
+.rating {
+  margin: 0 0 24px;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+}
+
+.rating legend {
+  padding: 0;
+  margin-bottom: 4px;
+}
+
+.rating-stars {
+  position: relative;
+  display: inline-flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: 4px;
+}
+
+.rating-stars input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.rating-stars label {
+  font-size: 2.4rem;
+  line-height: 1;
+  color: #D9DDE1;
+  cursor: pointer;
+  transition: color 0.15s, transform 0.15s;
+}
+
+.rating-stars label:hover,
+.rating-stars label:hover ~ label,
+.rating-stars input:checked ~ label {
+  color: #EB8C3C;
+}
+
+.rating-stars label:hover {
+  transform: scale(1.15);
+}
+
+.rating-stars input:focus + label {
+  outline: 3px solid #13707A;
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* Invalid field highlight (set by JavaScript on Request to Join / Evaluation) */
+.field-error input,
+.field-error select,
+.field-error textarea {
+  border-color: #C62828;
+  background-color: #FFF5F5;
+}
+
+.field-error input:focus,
+.field-error select:focus,
+.field-error textarea:focus {
+  box-shadow: 0 0 0 4px rgba(198, 40, 40, 0.18);
+}
+
+.rating.field-error .rating-stars {
+  outline: 2px solid #C62828;
+  outline-offset: 6px;
+  border-radius: 8px;
+}
+
+#current-session-requests {
+  margin-top: 24px;
+}
+
+#current-session-requests h2 {
+  margin-top: 0;
+}
+
+/* Dark theme for forms */
+body.dark-theme .form-box {
+  background-color: #1F2933;
+  border-color: #3A4855;
+}
+
+body.dark-theme .form-box label,
+body.dark-theme .rating legend {
+  color: #E6E9EC;
+}
+
+body.dark-theme .form-hint {
+  color: #AEB7C0;
+}
+
+body.dark-theme input[type="text"],
+body.dark-theme input[type="email"],
+body.dark-theme input[type="date"],
+body.dark-theme input[type="file"],
+body.dark-theme select,
+body.dark-theme textarea {
+  background-color: #24313D;
+  border-color: #465462;
+  color: #E6E9EC;
+}
+
+body.dark-theme input[type="date"] {
+  color-scheme: dark;
+}
+
+body.dark-theme .rating-stars label {
+  color: #465462;
+}
+
+body.dark-theme .rating-stars label:hover,
+body.dark-theme .rating-stars label:hover ~ label,
+body.dark-theme .rating-stars input:checked ~ label {
+  color: #EB8C3C;
+}
+
+body.dark-theme .field-error input,
+body.dark-theme .field-error select,
+body.dark-theme .field-error textarea {
+  border-color: #EF5350;
+  background-color: #3A2428;
+}
+
+/* ==========================================================
+   12. MANAGER DASHBOARD PAGES
+   ========================================================== */
+
+/* ==========================================================
+   13. QUICK LINKS AND MANAGER PAGES
+   ========================================================== */
+
+.page-intro {
+  max-width: 850px;
+  margin: 0 0 24px;
+  color: #5B6470;
+}
+
+.manager-quick-links {
+  align-items: stretch;
+}
+
+.manager-quick-links .btn {
+  flex: 0 1 280px;
+}
+
+.manager-form {
+  margin-top: 12px;
+}
+
+.manager-form .field {
+  max-width: 760px;
+}
+
+.manager-form .form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.manager-form button {
+  font-family: inherit;
+}
+
+.leader-management-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin: 18px 0 24px;
+}
+
+.leader-management-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #D8DDE2;
+  border-radius: 12px;
+  background: #FAFBFC;
+  cursor: pointer;
+  transition: border-color .2s, box-shadow .2s, transform .2s;
+}
+
+.leader-management-card:hover {
+  border-color: #8FB8BD;
+  box-shadow: 0 4px 14px rgba(33, 43, 54, .08);
+  transform: translateY(-2px);
+}
+
+.leader-management-card img {
+  width: 64px;
+  height: 64px;
+  flex: 0 0 64px;
+  object-fit: cover;
+  border-radius: 10px;
+  background: #E7F2F3;
+}
+
+.leader-management-info {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.leader-management-info strong {
+  color: #212B36;
+  overflow-wrap: anywhere;
+}
+
+.leader-management-info small {
+  color: #5B6470;
+}
+
+.leader-management-card input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+  accent-color: #13707A;
+  cursor: pointer;
+}
+
+.form-actions-wide {
+  grid-column: 1 / -1;
+}
+
+/* ==========================================================
+   14. FOOTER
+   ========================================================== */
+
+.site-footer {
+  background-color: #212B36;
+  color: #D5D9DE;
+  margin-top: 40px;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 36px 24px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 28px;
+}
+
+.footer-brand {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.footer-brand img {
+  width: 72px;
+  height: 72px;
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  padding: 6px;
+}
+
+.site-footer h2 {
+  color: #FFFFFF;
+  font-size: 1.15rem;
+  margin: 0 0 8px;
+}
+
+.site-footer h2::after {
+  display: none;
+}
+
+.site-footer address {
+  font-style: normal;
+}
+
+.site-footer a {
+  color: #F6B26B;
+}
+
+.social {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 18px;
+}
+
+.social a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.social img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.2s;
+}
+
+.social a:hover img {
+  transform: scale(1.12);
+}
+
+.copyright {
+  border-top: 1px solid #3A4552;
+  text-align: center;
+  padding: 14px 24px;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+
+/* ==========================================================
+   15. SMALL SCREENS
+   ========================================================== */
+
+@media (max-width: 650px) {
+  .manager-form {
+    padding: 20px 16px;
+  }
+
+  .manager-quick-links {
+    flex-direction: column;
+  }
+
+  .manager-quick-links .btn,
+  .manager-form .form-actions .btn,
+  .manager-form .form-actions button {
+    width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .leader-management-list {
+    grid-template-columns: 1fr;
+  }
+
+  .leader-management-card {
+    padding: 10px;
+  }
+
+  .page-intro {
+    font-size: .95rem;
+  }
+}
+
+
+/* ==========================================================
+   16. HOME PAGE - THEME BUTTON, BACK TO TOP, FOOTER CLOCK
+   ========================================================== */
+
+.page-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  border-bottom: 1px solid #D8DDE2;
+  margin: 8px 0 18px;
+}
+
+.page-title h1 {
+  margin: 0;
+  padding-bottom: 6px;
+  border-bottom: 0;
+}
+
+.theme-toggle {
+  padding: 8px 18px;
+  border: 2px solid #13707A;
+  border-radius: 20px;
+  background-color: #FFFFFF;
+  color: #13707A;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.theme-toggle:hover {
+  background-color: #13707A;
+  color: #FFFFFF;
+}
+
+.back-to-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 20;
+  padding: 12px 18px;
+  border: 0;
+  border-radius: 30px;
+  background-color: #EB8C3C;
+  color: #212B36;
+  font-family: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(33, 43, 54, 0.25);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: opacity 0.3s, transform 0.3s, visibility 0.3s;
+}
+
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background-color: #F5A257;
+}
+
+.footer-clock {
+  margin: 0;
+  padding: 0 24px 14px;
+  text-align: center;
+  color: #F6B26B;
+  font-weight: 600;
+}
+
+/* ==========================================================
+   17. DARK THEME (Home page - switched by the theme button)
+   ========================================================== */
+
+body.dark-theme {
+  background-color: #141A21;
+  color: #E6E9EC;
+}
+
+body.dark-theme a {
+  color: #6FD3DB;
+}
+
+body.dark-theme .btn {
+  color: #FFFFFF;
+}
+
+body.dark-theme .btn-orange {
+  color: #212B36;
+}
+
+body.dark-theme .site-header {
+  background-color: #1C252E;
+  border-bottom-color: #2C3742;
+}
+
+body.dark-theme .brand,
+body.dark-theme .main-nav a {
+  color: #E6E9EC;
+}
+
+body.dark-theme .main-nav a:hover {
+  background-color: #2C3742;
+  color: #6FD3DB;
+}
+
+body.dark-theme .main-nav a.active {
+  background-color: #13707A;
+  color: #FFFFFF;
+}
+
+body.dark-theme .breadcrumb,
+body.dark-theme .breadcrumb [aria-current="page"] {
+  color: #AEB6BF;
+}
+
+body.dark-theme .page-title {
+  border-bottom-color: #2C3742;
+}
+
+body.dark-theme .theme-toggle {
+  background-color: #1C252E;
+  border-color: #6FD3DB;
+  color: #6FD3DB;
+}
+
+body.dark-theme .theme-toggle:hover {
+  background-color: #6FD3DB;
+  color: #141A21;
+}
+
+body.dark-theme .intro-text p,
+body.dark-theme .offering-body p,
+body.dark-theme .review .feedback {
+  color: #C9D0D6;
+}
+
+body.dark-theme .intro-text .tagline {
+  color: #6FD3DB;
+}
+
+body.dark-theme .offering-card,
+body.dark-theme .review {
+  background-color: #1F2933;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+}
+
+body.dark-theme .review .member {
+  color: #AEB6BF;
+}
+
+body.dark-theme .site-footer {
+  background-color: #0D1217;
+}
+
+/* ==========================================================
+   18. RESPONSIVE HEADER, FOOTER AND HOME PAGE
+   ========================================================== */
+
+/* tablets and small laptops */
+@media (max-width: 900px) {
+  .intro {
+    gap: 24px;
+  }
+
+  .intro img {
+    height: 260px;
+  }
+
+  .offering-card {
+    max-width: none;
+  }
+}
+
+/* phones */
+@media (max-width: 720px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-nav {
+    width: 100%;
+  }
+
+  .main-nav ul {
+    justify-content: center;
+  }
+
+  .main-nav a {
+    padding: 6px 10px;
+    font-size: 0.9rem;
+  }
+
+  main {
+    padding: 8px 16px 32px;
+  }
+
+  .intro img {
+    flex-basis: 100%;
+    height: auto;
+  }
+
+  .intro-text p {
+    font-size: 1rem;
+  }
+
+  .trip-of-month img {
+    height: 440px;
+  }
+
+  .trip-content {
+    padding: 20px;
+    background: rgba(33, 43, 54, 0.7);
+  }
+
+  .trip-content h3 {
+    font-size: 1.5rem;
+  }
+
+  .countdown {
+    flex-wrap: nowrap;
+    gap: 8px;
+  }
+
+  .countdown div {
+    flex: 1;
+    min-width: 0;
+    padding: 8px 4px;
+  }
+
+  .countdown small {
+    font-size: 0.65rem;
+    letter-spacing: 0;
+  }
+
+  .countdown span {
+    font-size: 1.4rem;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-brand {
+    flex-direction: column;
+  }
+
+  .back-to-top {
+    right: 16px;
+    bottom: 16px;
+  }
+}
+
+/* small phones: the menu becomes a 2-column grid of buttons */
+@media (max-width: 480px) {
+  .main-nav ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .main-nav a {
+    text-align: center;
+    background-color: #F1F5F6;
+  }
+
+  body.dark-theme .main-nav a {
+    background-color: #24303A;
+  }
+
+  .page-title {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 10px;
+  }
+}
+
+
+/* ==========================================================
+   SHARED DARK THEME - Member Dashboard and Leader Profiles
+   Activated by the existing Home page theme button.
+   ========================================================== */
+body.dark-theme .page-container > h1,
+body.dark-theme .page-container h2 { color: #E6E9EC; }
+body.dark-theme .page-container > h1 { border-bottom-color: #2C3742; }
+body.dark-theme .dashboard-panel,
+body.dark-theme .profile-panel {
+  background: #1F2933;
+  border-color: #35424E;
+  color: #E6E9EC;
+  box-shadow: 0 4px 14px rgba(0,0,0,.28);
+}
+body.dark-theme .data-table { background: #1F2933; color: #E6E9EC; }
+body.dark-theme .data-table th { background: #293744; color: #E6E9EC; border-color: #3A4855; }
+body.dark-theme .data-table td { color: #D7DDE3; border-color: #3A4855; }
+body.dark-theme .data-table tbody tr:nth-child(even) { background: #24313D; }
+body.dark-theme .data-table tbody tr:hover { background: #2C3B48; }
+body.dark-theme .profile-summary { border-color: #3A4855; }
+body.dark-theme .profile-name { background: #293744; color: #E6E9EC; border-color: #3A4855; }
+body.dark-theme .profile-photo-cell { background: #1F2933; border-color: #3A4855; }
+body.dark-theme .profile-photo { background: #24313D; border-color: #465462; }
+body.dark-theme .profile-details th { background: #24313D; color: #C9D0D6; }
+body.dark-theme .profile-details th,
+body.dark-theme .profile-details td { border-color: #3A4855; color: #D7DDE3; }
+body.dark-theme .profile-section p { color: #C9D0D6; }
+body.dark-theme .profile-actions .btn,
+body.dark-theme .quick-links .btn { color: #FFFFFF; }
+body.dark-theme .site-footer { background-color: #0D1217; color: #E6E9EC; }
+body.dark-theme .site-footer address,
+body.dark-theme .site-footer h2 { color: #E6E9EC; }

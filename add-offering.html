@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Add a New Offering for Wanderly Travel Club.">
+  <title>Add a New Offering | Wanderly Travel Club</title>
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand"><img src="images/logo.svg" alt="Wanderly logo" width="46" height="46">Wanderly</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="offerings.html">Club Offerings</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="member-dashboard.html">Member Dashboard</a></li>
+        <li><a href="manager-dashboard.html" class="active" aria-current="page">Manager Dashboard</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li aria-current="page">Add a New Offering</li></ol></nav>
+  <main class="page-container">
+<h1>Add a New Offering</h1>
+<p class="page-intro">Use this form to provide the details of a new trip or experience for Wanderly members.</p>
+
+<section aria-labelledby="offering-form-title">
+  <h2 id="offering-form-title">Offering Details</h2>
+  <form class="form-box form-stack manager-form" action="#" method="post">
+    <div class="field">
+      <label for="offering-name">Offering Name</label>
+      <input type="text" id="offering-name" name="offering-name" placeholder="e.g. AlUla Heritage Trip" required>
+    </div>
+    <div class="field">
+      <label for="offering-image">Offering Image</label>
+      <input type="file" id="offering-image" name="offering-image" accept="image/*" required>
+      <p class="form-hint">Choose an image that represents the trip or experience.</p>
+    </div>
+    <div class="field">
+      <label for="offering-price">Price or Registration Fee (SAR)</label>
+      <input type="number" id="offering-price" name="offering-price" min="0" step="0.01" placeholder="Enter 0 for a free offering (SAR)" required>
+    </div>
+    <div class="field">
+      <label for="offering-description">Description</label>
+      <textarea id="offering-description" name="offering-description" rows="5" placeholder="Write a short description of the offering..." required></textarea>
+    </div>
+    <div class="form-actions">
+      <button class="btn btn-orange" type="submit">Submit Offering</button>
+      <a class="btn btn-outline" href="manager-dashboard.html">Back to Dashboard</a>
+    </div>
+  </form>
+</section>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="images/logo.svg" alt="Wanderly logo" width="72" height="72">
+        <div>
+          <h2>Contact Us</h2>
+          <address>Wanderly Travel Club, Riyadh, Saudi Arabia<br>
+            <a href="mailto:info@wanderly-club.example">info@wanderly-club.example</a> | <a href="tel:+966500000000">+966 50 000 0000</a>
+          </address>
+        </div>
+      </div>
+      <div>
+        <h2>Follow Us</h2>
+        <ul class="social">
+          <li><a href="https://www.instagram.com/" title="Instagram"><img src="images/icons/camera.svg" alt="Instagram" width="40" height="40">@wanderly</a></li>
+          <li><a href="https://x.com/" title="X"><img src="images/icons/chat.svg" alt="X" width="40" height="40">@wanderly</a></li>
+          <li><a href="https://www.youtube.com/" title="YouTube"><img src="images/icons/video.svg" alt="YouTube" width="40" height="40">@wanderly</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2026 Wanderly Interest Club. All rights reserved.</p>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>

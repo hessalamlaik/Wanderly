@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Manage Activity Leaders and Instructors for Wanderly Travel Club.">
+  <title>Manage Activity Leaders and Instructors | Wanderly Travel Club</title>
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand"><img src="images/logo.svg" alt="Wanderly logo" width="46" height="46">Wanderly</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="offerings.html">Club Offerings</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="member-dashboard.html">Member Dashboard</a></li>
+        <li><a href="manager-dashboard.html" class="active" aria-current="page">Manager Dashboard</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li aria-current="page">Manage Activity Leaders and Instructors</li></ol></nav>
+  <main class="page-container">
+<h1>Manage Activity Leaders and Instructors</h1>
+<p class="page-intro">View the current Wanderly team, select members for removal, or enter the details of a new activity leader or instructor.</p>
+
+<section aria-labelledby="current-team-title">
+  <h2 id="current-team-title">Current Activity Leaders &amp; Instructors</h2>
+  <form class="form-box manager-form" id="delete-leaders-form" action="#" method="post">
+    <p class="form-hint">Select one or more team members using the checkboxes.</p>
+    <div class="leader-management-list" id="leader-management-list">
+      <label class="leader-management-card" for="leader-noura">
+        <img src="images/leaders/noura.svg" alt="Noura Alqahtani">
+        <span class="leader-management-info"><strong>Noura Alqahtani</strong><small>Adventure Trips</small></span>
+        <input type="checkbox" id="leader-noura" name="delete-leaders" value="noura">
+      </label>
+      <label class="leader-management-card" for="leader-lama">
+        <img src="images/leaders/lama.svg" alt="Lama Alharbi">
+        <span class="leader-management-info"><strong>Lama Alharbi</strong><small>Cultural Tours</small></span>
+        <input type="checkbox" id="leader-lama" name="delete-leaders" value="lama">
+      </label>
+      <label class="leader-management-card" for="leader-reem">
+        <img src="images/leaders/reem.svg" alt="Reem Alotaibi">
+        <span class="leader-management-info"><strong>Reem Alotaibi</strong><small>Nature Trips</small></span>
+        <input type="checkbox" id="leader-reem" name="delete-leaders" value="reem">
+      </label>
+      <label class="leader-management-card" for="leader-sara">
+        <img src="images/leaders/sara.svg" alt="Sara Alqahtani">
+        <span class="leader-management-info"><strong>Sara Alqahtani</strong><small>Travel Photography</small></span>
+        <input type="checkbox" id="leader-sara" name="delete-leaders" value="sara">
+      </label>
+      <label class="leader-management-card" for="leader-maha">
+        <img src="images/leaders/maha.svg" alt="Maha Alshehri">
+        <span class="leader-management-info"><strong>Maha Alshehri</strong><small>Outdoor Activities</small></span>
+        <input type="checkbox" id="leader-maha" name="delete-leaders" value="maha">
+      </label>
+    </div>
+    <div class="form-actions">
+      <button class="btn btn-orange" type="submit">Delete Selected</button>
+    </div>
+  </form>
+</section>
+
+<section aria-labelledby="add-leader-title">
+  <h2 id="add-leader-title">Add a New Activity Leader or Instructor</h2>
+  <form class="form-box form-grid manager-form" id="add-leader-form" action="#" method="post">
+    <div class="field">
+      <label for="leader-name">Name</label>
+      <input type="text" id="leader-name" name="leader-name" placeholder="Enter full name" required>
+    </div>
+    <div class="field">
+      <label for="leader-photo">Photo</label>
+      <input type="file" id="leader-photo" name="leader-photo" accept="image/*" required>
+    </div>
+    <div class="field">
+      <label for="leader-dob">Date of Birth</label>
+      <input type="date" id="leader-dob" name="leader-dob" required>
+    </div>
+    <div class="field">
+      <label for="leader-email">Email</label>
+      <input type="email" id="leader-email" name="leader-email" placeholder="name@example.com" required>
+    </div>
+    <div class="field">
+      <label for="leader-expertise">Area of Expertise</label>
+      <input type="text" id="leader-expertise" name="leader-expertise" placeholder="e.g. Hiking and camping" required>
+    </div>
+    <div class="field">
+      <label for="leader-skills">Skills</label>
+      <input type="text" id="leader-skills" name="leader-skills" placeholder="Enter skills" required>
+    </div>
+    <div class="field">
+      <label for="leader-education">Education</label>
+      <input type="text" id="leader-education" name="leader-education" placeholder="Enter education" required>
+    </div>
+    <div class="form-actions form-actions-wide">
+      <button class="btn btn-orange" type="submit">Add Team Member</button>
+      <a class="btn btn-outline" href="manager-dashboard.html">Back to Dashboard</a>
+    </div>
+  </form>
+</section>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="images/logo.svg" alt="Wanderly logo" width="72" height="72">
+        <div>
+          <h2>Contact Us</h2>
+          <address>Wanderly Travel Club, Riyadh, Saudi Arabia<br>
+            <a href="mailto:info@wanderly-club.example">info@wanderly-club.example</a> | <a href="tel:+966500000000">+966 50 000 0000</a>
+          </address>
+        </div>
+      </div>
+      <div>
+        <h2>Follow Us</h2>
+        <ul class="social">
+          <li><a href="https://www.instagram.com/" title="Instagram"><img src="images/icons/camera.svg" alt="Instagram" width="40" height="40">@wanderly</a></li>
+          <li><a href="https://x.com/" title="X"><img src="images/icons/chat.svg" alt="X" width="40" height="40">@wanderly</a></li>
+          <li><a href="https://www.youtube.com/" title="YouTube"><img src="images/icons/video.svg" alt="YouTube" width="40" height="40">@wanderly</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2026 Wanderly Interest Club. All rights reserved.</p>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>

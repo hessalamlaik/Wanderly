@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Wanderly's mission, our activity leaders and instructors, and how to join our team.">
+  <title>About Us | Wanderly Travel Club</title>
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand"><img src="images/logo.svg" alt="Wanderly logo" width="46" height="46">Wanderly</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="offerings.html">Club Offerings</a></li>
+        <li><a href="about.html" class="active" aria-current="page">About Us</a></li>
+        <li><a href="member-dashboard.html">Member Dashboard</a></li>
+        <li><a href="manager-dashboard.html">Manager Dashboard</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="index.html">Home</a></li>
+      <li aria-current="page">About Us</li>
+    </ol>
+  </nav>
+
+  <main>
+    <h1>About Us</h1>
+    <section aria-labelledby="mission-title">
+      <h2 id="mission-title">Our Mission</h2>
+      <div class="mission">
+        <p>Wanderly is an interest club that connects students who share a passion for travel and exploration. We make it easy to discover local and regional trips, learn from experienced activity leaders and instructors, and share travel stories with a like-minded community.</p>
+        <p>Our mission is to encourage students to step outside their comfort zone, explore new places and cultures, and build lasting friendships through shared travel experiences, while keeping every trip organised, safe and accessible to everyone.</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="team-title">
+      <h2 id="team-title">Our Activity Leaders &amp; Instructors</h2>
+      <p class="hint">Scroll sideways to see the whole team &rarr;</p>
+      <div class="team-scroll">
+        <div class="team-member">
+          <img src="images/leaders/sara.svg" alt="Photo of Sara Alqahtani" width="400" height="400">
+          <a href="profile-sara.html">Sara Alqahtani</a>
+          <p>Senior Activity Leader</p>
+        </div>
+        <div class="team-member">
+          <img src="images/leaders/reem.svg" alt="Photo of Reem Alotaibi" width="400" height="400">
+          <a href="profile-reem.html">Reem Alotaibi</a>
+          <p>Hiking Instructor</p>
+        </div>
+        <div class="team-member">
+          <img src="images/leaders/lama.svg" alt="Photo of Lama Alharbi" width="400" height="400">
+          <a href="profile-lama.html">Lama Alharbi</a>
+          <p>Diving and Snorkeling Instructor</p>
+        </div>
+        <div class="team-member">
+          <img src="images/leaders/noura.svg" alt="Photo of Noura Alshehri" width="400" height="400">
+          <a href="profile-noura.html">Noura Alshehri</a>
+          <p>Activity Leader</p>
+        </div>
+        <div class="team-member">
+          <img src="images/leaders/maha.svg" alt="Photo of Maha Aldosari" width="400" height="400">
+          <a href="profile-maha.html">Maha Aldosari</a>
+          <p>Travel Photography Instructor</p>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="join-title">
+      <h2 id="join-title">Join Our Team</h2>
+      <form class="form-box" id="join-form" method="post" enctype="multipart/form-data">
+        <div class="form-grid">
+          <div class="field">
+            <label for="join-name">Name</label>
+            <input type="text" id="join-name" name="name" placeholder="Enter name" pattern="[^0-9].*" title="The name cannot start with a number." required>
+          </div>
+          <div class="field">
+            <label for="join-photo">Photo (upload)</label>
+            <input type="file" id="join-photo" name="photo" accept="image/*" required>
+          </div>
+          <div class="field">
+            <label for="join-dob">Date of Birth</label>
+            <input type="date" id="join-dob" name="dob" max="2008-12-31" required>
+          </div>
+          <div class="field">
+            <label for="join-email">Email</label>
+            <input type="email" id="join-email" name="email" placeholder="name@example.com" required>
+          </div>
+          <div class="field">
+            <label for="join-expertise">Area of Expertise</label>
+            <input type="text" id="join-expertise" name="expertise" placeholder="e.g. Desert hiking" required>
+          </div>
+          <div class="field">
+            <label for="join-skills">Skills</label>
+            <input type="text" id="join-skills" name="skills" placeholder="e.g. First aid, navigation" required>
+          </div>
+          <div class="field">
+            <label for="join-education">Education</label>
+            <input type="text" id="join-education" name="education" placeholder="e.g. BSc in Tourism" required>
+          </div>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn">Submit</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="images/logo.svg" alt="Wanderly logo" width="72" height="72">
+        <div>
+          <h2>Contact Us</h2>
+          <address>
+            Wanderly Travel Club, Riyadh, Saudi Arabia<br>
+            <a href="mailto:info@wanderly-club.example">info@wanderly-club.example</a> | <a href="tel:+966500000000">+966 50 000 0000</a>
+          </address>
+        </div>
+      </div>
+      <div>
+        <h2>Follow Us</h2>
+        <ul class="social">
+          <li><a href="https://www.instagram.com/" title="Instagram"><img src="images/icons/camera.svg" alt="Instagram" width="40" height="40">@wanderly</a></li>
+          <li><a href="https://x.com/" title="X"><img src="images/icons/chat.svg" alt="X" width="40" height="40">@wanderly</a></li>
+          <li><a href="https://www.youtube.com/" title="YouTube"><img src="images/icons/video.svg" alt="YouTube" width="40" height="40">@wanderly</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2026 Wanderly Interest Club. All rights reserved.</p>
+  </footer>
+</body>
+</html>
